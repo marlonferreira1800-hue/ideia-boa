@@ -12,6 +12,7 @@ Uma plataforma gratuita para aprender **Python do zero**, com aulas em texto, ex
 | 04 | Condicionais (`if`, `elif`, `else`) |
 | 05 | Laços de repetição (`for`, `while`) |
 | 06 | Listas e dicionários |
+| 07 | Funções (`def`, parâmetros, `return`) |
 
 ## 🚀 Como usar
 
@@ -33,7 +34,8 @@ Uma plataforma gratuita para aprender **Python do zero**, com aulas em texto, ex
     ├── modulo-3.html
     ├── modulo-4.html
     ├── modulo-5.html
-    └── modulo-6.html
+    ├── modulo-6.html
+    └── modulo-7.html
 ```
 
 ## 🎯 Próximos passos sugeridos

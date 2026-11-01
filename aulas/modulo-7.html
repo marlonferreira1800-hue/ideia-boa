@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 7 — Funções | Python do Zero</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <a class="logo" href="../index.html">🐍 Python do Zero</a>
+      <button class="menu-botao" id="menu-botao" aria-label="Abrir menu">☰</button>
+      <nav class="menu" id="menu">
+        <a href="../index.html">Início</a>
+        <a href="modulo-1.html">Módulo 1</a>
+        <a href="modulo-2.html">Módulo 2</a>
+        <a href="modulo-3.html">Módulo 3</a>
+        <a href="modulo-4.html">Módulo 4</a>
+        <a href="modulo-5.html">Módulo 5</a>
+        <a href="modulo-6.html">Módulo 6</a>
+        <a href="modulo-7.html">Módulo 7</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="aula">
+    <span class="modulo-tag">Módulo 07</span>
+    <h1>Funções</h1>
+    <p>Se você vai repetir o mesmo código várias vezes, crie uma <strong>função</strong>: um bloco de código com nome que pode ser reutilizado.</p>
+
+    <h2>Criando sua primeira função</h2>
+    <p>Use <code>def</code> seguido do nome da função e dos parênteses. O código da função fica indentado:</p>
+    <pre><code>def saudacao():
+    print("Olá! Seja bem-vindo ao curso.")
+
+saudacao()   # chama a função
+saudacao()   # chama de novo
+# Olá! Seja bem-vindo ao curso.
+# Olá! Seja bem-vindo ao curso.</code></pre>
+
+    <h2>Funções com parâmetros</h2>
+    <p>Parâmetros são valores que a função recebe para trabalhar:</p>
+    <pre><code>def saudacao(nome):
+    print(f"Olá, {nome}!")
+
+saudacao("Ana")      # Olá, Ana!
+saudacao("Carlos")   # Olá, Carlos!</code></pre>
+
+    <h2>Funções que devolvem um valor: return</h2>
+    <p>O <code>return</code> devolve um resultado que pode ser guardado em uma variável:</p>
+    <pre><code>def dobro(numero):
+    return numero * 2
+
+resultado = dobro(7)
+print(resultado)   # 14
+print(dobro(10))   # 20</code></pre>
+
+    <h2>Função com vários parâmetros</h2>
+    <pre><code>def area_retangulo(largura, altura):
+    return largura * altura
+
+print(area_retangulo(5, 3))   # 15
+print(area_retangulo(10, 2))  # 20</code></pre>
+
+    <h2>Parâmetros com valor padrão</h2>
+    <p>Se o valor não for informado, a função usa o padrão definido:</p>
+    <pre><code>def apresentar(nome, curso="Python do Zero"):
+    print(f"{nome} está estudando {curso}.")
+
+apresentar("Ana")                    # Ana está estudando Python do Zero.
+apresentar("Carlos", "JavaScript")   # Carlos está estudando JavaScript.</code></pre>
+
+    <h2>Por que usar funções?</h2>
+    <ul>
+      <li><strong>Reutiliza código</strong> — escreve uma vez, usa várias vezes.</li>
+      <li><strong>Organiza o programa</strong> — cada função faz uma tarefa.</li>
+      <li><strong>Facilita manutenção</strong> — se mudar, muda em um só lugar.</li>
+    </ul>
+
+    <h2>Exemplo completo: calculadora simples</h2>
+    <pre><code>def somar(a, b):
+    return a + b
+
+def subtrair(a, b):
+    return a - b
+
+def multiplicar(a, b):
+    return a * b
+
+def dividir(a, b):
+    if b == 0:
+        return "Erro: não dá para dividir por zero."
+    return a / b
+
+a = float(input("Primeiro número: "))
+b = float(input("Segundo número: "))
+
+print("Soma:", somar(a, b))
+print("Subtração:", subtrair(a, b))
+print("Multiplicação:", multiplicar(a, b))
+print("Divisão:", dividir(a, b))</code></pre>
+
+    <div class="exercicio">
+      <h3>📝 Exercício</h3>
+      <p>Crie uma função chamada <code>eh_par</code> que recebe um número e devolve <code>True</code> se ele for par e <code>False</code> se for ímpar. Depois teste com alguns números usando <code>print()</code>.</p>
+    </div>
+
+    <nav class="nav-aulas">
+      <a href="modulo-6.html">← Módulo 6</a>
+      <a href="../index.html">Voltar ao início →</a>
+    </nav>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>🐍 Python do Zero — aprenda a programar em Python gratuitamente.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
