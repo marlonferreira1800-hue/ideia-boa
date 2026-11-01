@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 3 — Entrada e saída de dados | Python do Zero</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <a class="logo" href="../index.html">🐍 Python do Zero</a>
+      <button class="menu-botao" id="menu-botao" aria-label="Abrir menu">☰</button>
+      <nav class="menu" id="menu">
+        <a href="../index.html">Início</a>
+        <a href="modulo-1.html">Módulo 1</a>
+        <a href="modulo-2.html">Módulo 2</a>
+        <a href="modulo-3.html">Módulo 3</a>
+        <a href="modulo-4.html">Módulo 4</a>
+        <a href="modulo-5.html">Módulo 5</a>
+        <a href="modulo-6.html">Módulo 6</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="aula">
+    <span class="modulo-tag">Módulo 03</span>
+    <h1>Entrada e saída de dados</h1>
+    <p>Até agora os programas só <strong>mostraram</strong> coisas na tela. Nesta aula você vai aprender a <strong>ler o que o usuário digita</strong>.</p>
+
+    <h2>Saída de dados: print()</h2>
+    <p>Já vimos o <code>print()</code>. Ele também permite mostrar várias coisas de uma vez, separadas por vírgula:</p>
+    <pre><code>nome = "Carlos"
+idade = 30
+print("Nome:", nome, "| Idade:", idade)
+# Nome: Carlos | Idade: 30</code></pre>
+
+    <h2>Entrada de dados: input()</h2>
+    <p>O comando <code>input()</code> pausa o programa e espera o usuário digitar algo e apertar Enter. O que foi digitado vira um <strong>texto (str)</strong>:</p>
+    <pre><code>nome = input("Qual é o seu nome? ")
+print("Prazer em te conhecer,", nome, "!")</code></pre>
+
+    <h2>Lendo números com input()</h2>
+    <p>Como o <code>input()</code> devolve sempre texto, precisamos converter para número quando quisermos fazer contas:</p>
+    <pre><code>idade_texto = input("Qual é a sua idade? ")
+idade = int(idade_texto)
+print("Daqui a 10 anos você terá", idade + 10, "anos.")
+
+# Para números com vírgula/ponto decimal, use float:
+altura = float(input("Qual é a sua altura? "))
+print("Sua altura é", altura)</code></pre>
+
+    <h2>Textos formatados com f-string</h2>
+    <p>A <strong>f-string</strong> (a letra <code>f</code> antes das aspas) permite colocar variáveis dentro do texto de forma fácil:</p>
+    <pre><code>nome = input("Seu nome: ")
+idade = int(input("Sua idade: "))
+print(f"Olá, {nome}! Você tem {idade} anos.")
+# Olá, Ana! Você tem 25 anos.</code></pre>
+
+    <h2>Exemplo completo: calculadora de IMC</h2>
+    <pre><code>peso = float(input("Digite seu peso (kg): "))
+altura = float(input("Digite sua altura (m): "))
+imc = peso / (altura ** 2)
+print(f"Seu IMC é {imc:.2f}")</code></pre>
+    <p>O <code>:.2f</code> dentro da f-string mostra o número com 2 casas decimais.</p>
+
+    <div class="exercicio">
+      <h3>📝 Exercício</h3>
+      <p>Crie um programa que pergunte o nome de um produto e o preço, e depois mostre: <em>"O produto X custa R$ Y"</em>, usando f-string.</p>
+    </div>
+
+    <nav class="nav-aulas">
+      <a href="modulo-2.html">← Módulo 2</a>
+      <a href="modulo-4.html">Módulo 4 →</a>
+    </nav>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>🐍 Python do Zero — aprenda a programar em Python gratuitamente.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

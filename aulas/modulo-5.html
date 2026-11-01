@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 5 — Laços de repetição | Python do Zero</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <a class="logo" href="../index.html">🐍 Python do Zero</a>
+      <button class="menu-botao" id="menu-botao" aria-label="Abrir menu">☰</button>
+      <nav class="menu" id="menu">
+        <a href="../index.html">Início</a>
+        <a href="modulo-1.html">Módulo 1</a>
+        <a href="modulo-2.html">Módulo 2</a>
+        <a href="modulo-3.html">Módulo 3</a>
+        <a href="modulo-4.html">Módulo 4</a>
+        <a href="modulo-5.html">Módulo 5</a>
+        <a href="modulo-6.html">Módulo 6</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="aula">
+    <span class="modulo-tag">Módulo 05</span>
+    <h1>Laços de repetição (for e while)</h1>
+    <p>Imagine ter que escrever <code>print()</code> 100 vezes. Com <strong>laços de repetição</strong>, o computador repete o código para você.</p>
+
+    <h2>for — repetir uma quantidade conhecida de vezes</h2>
+    <p>A função <code>range()</code> gera uma sequência de números:</p>
+    <pre><code>for i in range(5):
+    print(i)
+# 0 1 2 3 4</code></pre>
+    <p>O <code>range(5)</code> gera os números de 0 até 4. También dá para começar em outro número:</p>
+    <pre><code>for i in range(1, 6):
+    print(i)
+# 1 2 3 4 5</code></pre>
+
+    <h2>Tabuada com for</h2>
+    <pre><code>numero = int(input("Tabuada de qual número? "))
+
+for i in range(1, 11):
+    resultado = numero * i
+    print(f"{numero} x {i} = {resultado}")</code></pre>
+
+    <h2>Somando uma lista de números</h2>
+    <pre><code>total = 0
+for i in range(1, 101):
+    total = total + i
+print("A soma de 1 a 100 é", total)  # 5050</code></pre>
+
+    <h2>while — repetir enquanto uma condição for verdadeira</h2>
+    <pre><code>contador = 1
+while contador <= 5:
+    print(contador)
+    contador = contador + 1
+# 1 2 3 4 5</code></pre>
+    <p><strong>Cuidado:</strong> se a condição nunca ficar falsa, o programa fica preso num <strong>loop infinito</strong>. Sempre garanta que a variável da condição muda dentro do laço.</p>
+
+    <h2>while com input — validar até acertar</h2>
+    <pre><code>senha = ""
+while senha != "1234":
+    senha = input("Digite a senha: ")
+print("Acesso permitido!")</code></pre>
+
+    <h2>break e continue</h2>
+    <pre><code># break: sai do laço na hora
+for i in range(10):
+    if i == 5:
+        break
+    print(i)   # imprime 0 1 2 3 4
+
+# continue: pula para a próxima repetição
+for i in range(6):
+    if i == 3:
+        continue
+    print(i)   # imprime 0 1 2 4 5 (pula o 3)</code></pre>
+
+    <div class="exercicio">
+      <h3>📝 Exercício</h3>
+      <p>Peça números ao usuário até ele digitar 0. Depois mostre a soma de todos os números digitados (sem contar o 0).</p>
+    </div>
+
+    <nav class="nav-aulas">
+      <a href="modulo-4.html">← Módulo 4</a>
+      <a href="modulo-6.html">Módulo 6 →</a>
+    </nav>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>🐍 Python do Zero — aprenda a programar em Python gratuitamente.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

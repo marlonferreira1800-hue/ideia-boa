@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 4 — Condicionais | Python do Zero</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <a class="logo" href="../index.html">🐍 Python do Zero</a>
+      <button class="menu-botao" id="menu-botao" aria-label="Abrir menu">☰</button>
+      <nav class="menu" id="menu">
+        <a href="../index.html">Início</a>
+        <a href="modulo-1.html">Módulo 1</a>
+        <a href="modulo-2.html">Módulo 2</a>
+        <a href="modulo-3.html">Módulo 3</a>
+        <a href="modulo-4.html">Módulo 4</a>
+        <a href="modulo-5.html">Módulo 5</a>
+        <a href="modulo-6.html">Módulo 6</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="aula">
+    <span class="modulo-tag">Módulo 04</span>
+    <h1>Condicionais (if, elif, else)</h1>
+    <p>Programas precisam <strong>tomar decisões</strong>. Nesta aula você vai aprender a fazer o código escolher caminhos diferentes.</p>
+
+    <h2>Operadores de comparação</h2>
+    <ul>
+      <li><code>==</code> igual a</li>
+      <li><code>!=</code> diferente de</li>
+      <li><code>&gt;</code> maior que &nbsp; <code>&lt;</code> menor que</li>
+      <li><code>&gt;=</code> maior ou igual &nbsp; <code>&lt;=</code> menor ou igual</li>
+    </ul>
+    <p>Essas comparações devolvem <code>True</code> (verdadeiro) ou <code>False</code> (falso).</p>
+
+    <h2>if — se isso, faça aquilo</h2>
+    <pre><code>idade = int(input("Qual é a sua idade? "))
+
+if idade >= 18:
+    print("Você é maior de idade.")
+
+print("Fim do programa.")</code></pre>
+    <p><strong>Importante:</strong> em Python, o bloco dentro do <code>if</code> é definido pela <strong>indentação</strong> (os espaços no início da linha). Use 4 espaços.</p>
+
+    <h2>else — caso contrário</h2>
+    <pre><code>idade = int(input("Qual é a sua idade? "))
+
+if idade >= 18:
+    print("Maior de idade.")
+else:
+    print("Menor de idade.")</code></pre>
+
+    <h2>elif — várias condições</h2>
+    <pre><code>nota = float(input("Digite a nota (0 a 10): "))
+
+if nota >= 7:
+    print("Aprovado!")
+elif nota >= 5:
+    print("Recuperação.")
+else:
+    print("Reprovado.")</code></pre>
+
+    <h2>Condições combinadas com and / or / not</h2>
+    <pre><code>idade = int(input("Idade: "))
+tem_cnh = input("Tem CNH? (s/n): ")
+
+if idade >= 18 and tem_cnh == "s":
+    print("Pode dirigir.")
+else:
+    print("Não pode dirigir.")
+
+# or — basta uma ser verdadeira
+if tem_cnh == "s" or idade >= 21:
+    print("Condição atendida.")
+
+# not — inverte o valor
+if not tem_cnh == "s":
+    print("Não tem CNH.")</code></pre>
+
+    <h2>Comparando textos</h2>
+    <pre><code>senha = input("Digite a senha: ")
+
+if senha == "python123":
+    print("Acesso permitido.")
+else:
+    print("Senha incorreta.")</code></pre>
+
+    <div class="exercicio">
+      <h3>📝 Exercício</h3>
+      <p>Crie um programa que pergunte um número e diga se ele é positivo, negativo ou igual a zero.</p>
+    </div>
+
+    <nav class="nav-aulas">
+      <a href="modulo-3.html">← Módulo 3</a>
+      <a href="modulo-5.html">Módulo 5 →</a>
+    </nav>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>🐍 Python do Zero — aprenda a programar em Python gratuitamente.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

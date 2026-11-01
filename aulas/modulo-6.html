@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 6 — Listas e dicionários | Python do Zero</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <a class="logo" href="../index.html">🐍 Python do Zero</a>
+      <button class="menu-botao" id="menu-botao" aria-label="Abrir menu">☰</button>
+      <nav class="menu" id="menu">
+        <a href="../index.html">Início</a>
+        <a href="modulo-1.html">Módulo 1</a>
+        <a href="modulo-2.html">Módulo 2</a>
+        <a href="modulo-3.html">Módulo 3</a>
+        <a href="modulo-4.html">Módulo 4</a>
+        <a href="modulo-5.html">Módulo 5</a>
+        <a href="modulo-6.html">Módulo 6</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="aula">
+    <span class="modulo-tag">Módulo 06</span>
+    <h1>Listas e dicionários</h1>
+    <p>Até agora guardamos um valor por variável. Nesta aula você vai aprender a guardar <strong>vários valores de uma vez</strong>.</p>
+
+    <h2>Listas</h2>
+    <p>Uma lista é uma coleção ordenada de valores, escrita entre colchetes:</p>
+    <pre><code>frutas = ["maçã", "banana", "laranja"]
+print(frutas)          # ['maçã', 'banana', 'laranja']
+print(frutas[0])       # maçã (o primeiro elemento é o índice 0)
+print(frutas[2])       # laranja
+print(len(frutas))     # 3 (quantidade de itens)</code></pre>
+
+    <h2>Alterando e adicionando itens</h2>
+    <pre><code>frutas[1] = "uva"              # troca a banana por uva
+frutas.append("melancia")      # adiciona no fim
+frutas.remove("uva")           # remove um item pelo valor
+print(frutas)</code></pre>
+
+    <h2>Percorrendo uma lista com for</h2>
+    <pre><code>notas = [8.5, 7.0, 9.2, 6.5]
+
+soma = 0
+for nota in notas:
+    soma = soma + nota
+
+media = soma / len(notas)
+print(f"Média: {media:.2f}")</code></pre>
+
+    <h2>Dicionários</h2>
+    <p>Um dicionário guarda pares de <strong>chave e valor</strong>, entre chaves. É como uma ficha cadastral:</p>
+    <pre><code>pessoa = {
+    "nome": "Ana",
+    "idade": 25,
+    "cidade": "São Paulo"
+}
+
+print(pessoa["nome"])     # Ana
+pessoa["email"] = "ana@email.com"   # adiciona um novo campo
+print(pessoa)</code></pre>
+
+    <h2>Percorrendo um dicionário</h2>
+    <pre><code>for chave, valor in pessoa.items():
+    print(f"{chave}: {valor}")</code></pre>
+
+    <h2>Lista de dicionários — uma agenda simples</h2>
+    <pre><code>agenda = [
+    {"nome": "Ana", "telefone": "1111-1111"},
+    {"nome": "Carlos", "telefone": "2222-2222"}
+]
+
+for contato in agenda:
+    print(f"{contato['nome']} — {contato['telefone']}")</code></pre>
+
+    <div class="exercicio">
+      <h3>📝 Exercício</h3>
+      <p>Crie uma lista com 5 números digitados pelo usuário e mostre: a soma, a média e o maior número da lista.</p>
+    </div>
+
+    <nav class="nav-aulas">
+      <a href="modulo-5.html">← Módulo 5</a>
+      <a href="../index.html">Voltar ao início →</a>
+    </nav>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>🐍 Python do Zero — aprenda a programar em Python gratuitamente.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

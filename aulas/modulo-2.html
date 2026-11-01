@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 2 — Variáveis e tipos de dados | Python do Zero</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <a class="logo" href="../index.html">🐍 Python do Zero</a>
+      <button class="menu-botao" id="menu-botao" aria-label="Abrir menu">☰</button>
+      <nav class="menu" id="menu">
+        <a href="../index.html">Início</a>
+        <a href="modulo-1.html">Módulo 1</a>
+        <a href="modulo-2.html">Módulo 2</a>
+        <a href="modulo-3.html">Módulo 3</a>
+        <a href="modulo-4.html">Módulo 4</a>
+        <a href="modulo-5.html">Módulo 5</a>
+        <a href="modulo-6.html">Módulo 6</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="aula">
+    <span class="modulo-tag">Módulo 02</span>
+    <h1>Variáveis e tipos de dados</h1>
+    <p>Nesta aula você vai aprender a guardar informações na memória do computador usando <strong>variáveis</strong>.</p>
+
+    <h2>O que é uma variável?</h2>
+    <p>Uma variável é como uma <strong>caixinha com um nome</strong> onde guardamos um valor. Em Python, criamos uma variável atribuindo um valor a um nome:</p>
+    <pre><code>nome = "Ana"
+idade = 25
+altura = 1.65</code></pre>
+    <p>Depois podemos usar essas variáveis no programa:</p>
+    <pre><code>print(nome)
+print(idade)</code></pre>
+
+    <h2>Principais tipos de dados</h2>
+    <ul>
+      <li><code>str</code> — texto (sempre entre aspas): <code>"Olá"</code> ou <code>'Olá'</code></li>
+      <li><code>int</code> — números inteiros: <code>10</code>, <code>-3</code></li>
+      <li><code>float</code> — números com casas decimais: <code>3.14</code>, <code>0.5</code></li>
+      <li><code>bool</code> — verdadeiro ou falso: <code>True</code> ou <code>False</code></li>
+    </ul>
+
+    <h2>Descobrindo o tipo de uma variável</h2>
+    <pre><code>mensagem = "Oi"
+print(type(mensagem))   # &lt;class 'str'&gt;
+
+numero = 42
+print(type(numero))     # &lt;class 'int'&gt;</code></pre>
+
+    <h2>Operações com números</h2>
+    <pre><code>a = 10
+b = 3
+
+print(a + b)   # 13  soma
+print(a - b)   # 7   subtração
+print(a * b)   # 30  multiplicação
+print(a / b)   # 3.3333... divisão
+print(a // b)  # 3   divisão inteira (sem casas decimais)
+print(a % b)   # 1   resto da divisão
+print(a ** b)  # 1000 potência (10 elevado a 3)</code></pre>
+
+    <h2>Juntando textos</h2>
+    <p>Com textos, o <code>+</code> serve para juntar (concatenar):</p>
+    <pre><code>primeiro = "Ana"
+ultimo = "Silva"
+nome_completo = primeiro + " " + ultimo
+print(nome_completo)  # Ana Silva</code></pre>
+
+    <h2>Convertendo tipos</h2>
+    <pre><code>numero_texto = "25"
+numero = int(numero_texto)      # vira número inteiro
+print(numero + 5)               # 30
+
+texto = str(100)                # vira texto
+print(texto + " reais")         # 100 reais</code></pre>
+
+    <h2>Regras para nomear variáveis</h2>
+    <ul>
+      <li>Pode usar letras, números e underline (<code>_</code>), mas não pode começar com número.</li>
+      <li>Não use espaços — prefira <code>nome_completo</code> no lugar de <code>nome completo</code>.</li>
+      <li>Evite acentos e caracteres especiais nos nomes.</li>
+    </ul>
+
+    <div class="exercicio">
+      <h3>📝 Exercício</h3>
+      <p>Crie um programa que guarda o preço de um produto e a quantidade comprada, e imprime o valor total da compra.</p>
+    </div>
+
+    <nav class="nav-aulas">
+      <a href="modulo-1.html">← Módulo 1</a>
+      <a href="modulo-3.html">Módulo 3 →</a>
+    </nav>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>🐍 Python do Zero — aprenda a programar em Python gratuitamente.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
